@@ -1,0 +1,66 @@
+.tree {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0 0.8em;
+    line-height: 2em;
+    color: #555;
+    font-weight: 700;
+    position: relative;
+
+    &:last-child {
+      &:before {
+        height: 1em;
+        bottom: auto;
+      }
+    }
+  }
+
+  ul {
+    margin: 0.5em;
+    padding: 0;
+    list-style: none;
+
+    li:last-child:after {
+      display: none;
+    }
+
+    li {
+      &:before {
+        display: block;
+        width: 10px;
+        height: 0;
+        border-top: 1px solid #ccc;
+        margin-top: -1px;
+        position: absolute;
+        top: 1em;
+        left: 0;
+        content: '';
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -1em;
+        left: 0;
+        bottom: -1.5em;
+        border-left: 1px solid #ccc;
+        display: block;
+      }
+    }
+
+    li {
+      &:last-child {
+        &:before {
+          background: #fff;
+          height: auto;
+          top: 0.8em;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

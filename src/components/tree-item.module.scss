@@ -1,0 +1,23 @@
+.indicator {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 0.5em;
+  color: #ccc;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  height: 1em;
+  width: 1em;
+  position: relative;
+
+  &:hover {
+    color: palevioletred;
+    border-color: palevioletred;
+  }
+
+  span {
+    position: absolute;
+    top: -0.65em;
+    left: 0.125em;
+  }
+}

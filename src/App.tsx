@@ -1,24 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Components
+import { TreeMenu } from './components/tree-menu';
 
-function App() {
+const STRUCTURE = [
+  {
+    id: 'id-0-1',
+    label: 'Tree',
+    nodes: [
+      {
+        id: 'id-0-1',
+        label: 'Level 0',
+        nodes: [
+          {
+            id: 'id-1-1',
+            label: 'Level 1',
+            nodes: [
+              { id: 'id-2-1', label: 'Level 2' },
+              { id: 'id-2-2', label: 'Level 2' },
+            ],
+          },
+          { id: 'id-1-2', label: 'Level 1' },
+          {
+            id: 'id-1-3',
+            label: 'Level 1',
+            nodes: [
+              { id: 'id-2-1', label: 'Level 2' },
+              {
+                id: 'id-2-2',
+                label: 'Level 2',
+                nodes: [
+                  { id: 'id-3-1', label: 'Level 3' },
+                  { id: 'id-3-2', label: 'Level 3' },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'id-0-2',
+        label: 'Level 0',
+        nodes: [
+          { id: 'id-1-1', label: 'Level 1 long label' },
+          { id: 'id-1-2', label: 'Level 1' },
+        ],
+      },
+    ],
+  },
+];
+
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TreeMenu structure={STRUCTURE} />
     </div>
   );
 }

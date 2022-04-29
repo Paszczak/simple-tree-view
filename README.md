@@ -57,3 +57,7 @@ Accepts `structure` prop written in form
         ],
       },
     ];
+
+The expanded tree is of the form:
+
+![THe Simple Tree View](./simple-tee-view.png)
